@@ -61,7 +61,7 @@ body{
 /* ---------- SECTIONS ---------- */
 section{padding:40px 0}
 
-/* ---------- ABOUT ---------- */
+/* ---------- HEADINGS & PARAGRAPHS ---------- */
 .about h2, .services h2, .portfolio h2, .pricing h2, .contact h2{
   color:var(--heading-dark);
   margin-bottom:12px;
@@ -72,7 +72,7 @@ section{padding:40px 0}
   color:#334155;
 }
 
-/* ---------- SERVICE CARDS ---------- */
+/* ---------- SERVICE & PORTFOLIO CARDS ---------- */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -131,6 +131,19 @@ section{padding:40px 0}
   text-align:center;color:#6b7a8b;
   padding:40px 10px;font-size:13px;
 }
+
+/* ---------- PORTFOLIO IMAGE ---------- */
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:600px){
+  .container{padding:15px}
+  .site-header{padding:24px 10px}
+}
 </style>
 </head>
 
@@ -162,7 +175,29 @@ section{padding:40px 0}
   </p>
 </section>
 
-  <h2 style="margin-top:40px;">Services</h2>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Regulatory Writing</h3>
+      <p>CTD, CSP, IB, CSR, ICF, PDE, Executive Summaries & Regulatory Submissions.</p>
+    </div>
+    <div class="card">
+      <h3>Clinical Writing</h3>
+      <p>CSRs, Safety Narratives, Efficacy Summaries, Investigator Materials.</p>
+    </div>
+    <div class="card">
+      <h3>Scientific Communication</h3>
+      <p>Slide Decks, Explainer Scripts, Medical Education, Visual Storytelling.</p>
+    </div>
+    <div class="card">
+      <h3>Publication & Manuscripts</h3>
+      <p>Review Articles, Journal Manuscripts, Abstracts & Conference Posters.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:40px;">Detailed Services</h2>
 
   <!-- REGULATORY -->
   <div class="collapsible">
@@ -266,6 +301,29 @@ section{padding:40px 0}
 <section id="portfolio" class="portfolio">
   <h2>Portfolio</h2>
   <p>Examples of medical writing, regulatory submissions, publications, and scientific communication delivered for global clients (confidentiality maintained).</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="portfolio1.jpg" alt="Sample 1">
+      <h3>Clinical Study Report</h3>
+      <p>CSR for a phase 3 clinical trial in oncology demonstrating efficacy and safety outcomes.</p>
+    </div>
+    <div class="card">
+      <img src="portfolio2.jpg" alt="Sample 2">
+      <h3>Regulatory Submission</h3>
+      <p>CTD module 2.5 for regulatory submission in ASEAN countries, highlighting clinical overview and summary.</p>
+    </div>
+    <div class="card">
+      <img src="portfolio3.jpg" alt="Sample 3">
+      <h3>Medical Education Deck</h3>
+      <p>Scientific slides created for HCP training on dermatology injectables and skincare innovations.</p>
+    </div>
+    <div class="card">
+      <img src="portfolio4.jpg" alt="Sample 4">
+      <h3>Publication & Manuscript</h3>
+      <p>Systematic review manuscript prepared for peer-reviewed journal in the field of cardiology.</p>
+    </div>
+  </div>
 </section>
 
 <!-- PRICING -->
