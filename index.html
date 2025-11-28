@@ -1,68 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scientific Script(SS)</title> Freelance Medical Writing</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f8ff; color: #0a2747; }
-    header { background: #0A3D91; color: #fff; padding: 30px; text-align: center; }
-    h1 { margin: 0; font-size: 2.5rem; }
-    h2 { color: #0A3D91; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
-    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    footer { text-align: center; padding: 20px; background: #0A3D91; color:#fff; margin-top: 40px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Script — Medical Writing & Regulatory Services</title>
+
+<style>
+/* ---------- THEME COLORS (Matches your screenshot) ---------- */
+:root{
+  --brand-blue:#0b4f9a;
+  --brand-deep:#003B8E;
+  --subtitle-blue:#bfd7f5;
+  --page-bg:#f3f7fb;
+  --card-bg:#ffffff;
+  --heading-dark:#0b2540;
+  --muted:#445566;
+}
+
+/* ---------- BASE ---------- */
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;
+  background:var(--page-bg);color:var(--muted);
+}
+
+/* ---------- HEADER ---------- */
+.site-header{
+  background:var(--brand-deep);
+  color:white;
+  text-align:center;
+  padding:36px 15px;
+}
+.site-header h1{margin:0;font-size:42px;color:#fff}
+.site-header p{margin:8px 0 0;color:var(--subtitle-blue)}
+
+/* ---------- LAYOUT ---------- */
+.container{max-width:1100px;margin:auto;padding:30px}
+
+/* ---------- ABOUT ---------- */
+.about h2{color:var(--heading-dark);margin-bottom:12px}
+.about p{line-height:1.7;font-size:15px;color:#334155}
+
+/* ---------- SERVICE CARDS ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:18px;
+}
+.card{
+  background:var(--card-bg);
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(12,36,75,0.06);
+}
+.card h3{margin:0;color:var(--heading-dark);font-size:18px}
+.card p{font-size:14px;margin-top:6px}
+
+/* ---------- COLLAPSIBLE SECTIONS ---------- */
+.collapsible{
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(12,36,75,0.06);
+  margin-top:18px;
+}
+.collapsible .head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 18px;
+  cursor:pointer;
+}
+.icon{
+  width:46px;height:46px;
+  background:linear-gradient(180deg,var(--brand-blue),var(--brand-deep));
+  border-radius:10px;color:white;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+}
+.head h4{margin:0;color:var(--heading-dark)}
+.head .summary{margin-left:auto;color:#66788f;font-size:13px}
+
+.panel{
+  max-height:0;overflow:hidden;
+  padding:0 18px;
+  transition:max-height .3s ease,padding .3s ease;
+}
+.panel.open{
+  padding:12px 18px 18px;
+  max-height:2000px;
+}
+.panel ul{margin:0;padding-left:20px}
+.panel li{margin:8px 0;font-size:14px;color:#334155}
+
+/* ---------- FOOTER ---------- */
+.footer{
+  text-align:center;color:#6b7a8b;
+  padding:40px 10px;font-size:13px;
+}
+</style>
 </head>
+
+
 <body>
-  <header>
-    <h1>Scientific Script</h1>
-    <p>Science Explained. Stories Told. Submissions Delivered.</p>
-  </header>
 
-  <section>
-    <h2>About Scientific Script</h2>
-    <p>
-      Scientific Script is a global scientific communication and premium medical writing brand led by an experienced Lead Medical Writer. I transform complex scientific, clinical, and regulatory information into clear, compliant, and publication-ready content for pharmaceutical, biotech, and healthcare organizations worldwide.
+<!-- =========================== HEADER ========================== -->
+<header class="site-header">
+  <h1>Scientific Script</h1>
+  <p>Science Explained. Stories Told. Submissions Delivered.</p>
+</header>
 
-      With deep expertise in CTD modules, clinical trial documentation, pharmacokinetics, and scientific storytelling, Scientific Script helps clients achieve regulatory clarity, scientific credibility, and global submission excellence.
 
-      My mission is simple: deliver high-quality scientific content that strengthens decision-making, accelerates regulatory pathways, and elevates the scientific value of every project.
-    </p>
-  </section>
+<!-- ========================== MAIN ============================ -->
+<div class="container">
 
-  <section>
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card"><h3>Regulatory Writing</h3><p>CTD (Module 2) 
-        2.4 Non Clinical Overview
-        2.5 Clinical Overview
-        2.6 Non ClinicalSummary
-        2.7 ClinicalSummary
-        Clinical Trial Protocols
-        Investigator Brochure (IBs)
-        Clinical Study Reports (CSRs)
-        Regulatory Summaries</p></div>
-      <div class="card"><h3>Clinical Writing</h3><p>Clinical trial interpretation, safety & efficacy summaries, scientific reviews.</p></div>
-      <div class="card"><h3>Scientific Communication</h3><p>Educational visuals, YouTube and Instagram explainer scripts, medical content.</p></div>
-      <div class="card"><h3>Medical Writing</h3><p>Manuscripts, short communications, literature reviews, scientific blogs.</p></div>
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Scientific Script</h2>
+  <p>
+    Scientific Script is a global scientific communication and premium medical writing brand led by an experienced Lead Medical Writer. I transform complex scientific, clinical, and regulatory information into clear, compliant, and publication-ready content for pharmaceutical, biotech, and healthcare organizations worldwide. With deep expertise in CTD modules, clinical trial documentation, pharmacokinetics, and scientific storytelling, Scientific Script helps clients achieve regulatory clarity, scientific credibility, and global submission excellence.
+  </p>
+</section>
+
+
+<!-- SERVICE CARDS (Home preview) -->
+<section>
+  <h2 style="color:var(--heading-dark)">Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Regulatory Writing</h3>
+      <p>CTD, CSP, IB, CSR, ICF, PDE, Executive Summaries & Regulatory Submissions.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>Portfolio</h2>
-    <p>Coming soon: High-quality regulatory and scientific writing samples showcasing expertise and clarity.</p>
-  </section>
+    <div class="card">
+      <h3>Clinical Writing</h3>
+      <p>CSRs, Safety Narratives, Efficacy Summaries, Investigator Materials.</p>
+    </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <strong>scientificscript@outlook.com</p>
-    <p>LinkedIn:www.linkedin.com/in/dr-usha-vanya-valivela-a1532611a </p>
-  </section>
+    <div class="card">
+      <h3>Scientific Communication</h3>
+      <p>Slide Decks, Explainer Scripts, Medical Education, Visual Storytelling.</p>
+    </div>
 
-  <footer>
-    <p>© 2025 Scientific Script. All Rights Reserved.</p>
-  </footer>
+    <div class="card">
+      <h3>Publication & Manuscripts</h3>
+      <p>Review Articles, Journal Manuscripts, Abstracts & Conference Posters.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===================== DETAILED COLLAPSIBLE ====================== -->
+
+<h2 style="margin-top:40px;color:var(--heading-dark)">Detailed Services</h2>
+
+
+<!-- REGULATORY -->
+<div class="collapsible">
+  <div class="head" onclick="togglePanel('reg')">
+    <div class="icon">📄</div>
+    <h4>Regulatory Writing</h4>
+    <div class="summary">Expand</div>
+  </div>
+
+  <div id="reg" class="panel">
+    <ul>
+      <li><strong>Clinical Study Protocols (CSP)</strong></li>
+      <li><strong>Investigator Brochures (IB)</strong></li>
+      <li><strong>Clinical Study Reports (CSR)</strong></li>
+      <li><strong>Informed Consent Form (ICF)</strong></li>
+      <li><strong>PDE (Permitted Daily Exposure)</strong></li>
+      <li><strong>Executive Summaries</strong></li>
+    </ul>
+
+    <h4>CTD Modules</h4>
+    <ul>
+      <li>2.4 Non-Clinical Overview</li>
+      <li>2.5 Clinical Overview</li>
+      <li>2.6 Non-Clinical Summary</li>
+      <li>2.7 Clinical Summary</li>
+      <li>4.0 Non-Clinical Study Reports</li>
+      <li>4.3 Non-Clinical Literature Reference</li>
+      <li>5.4 Clinical Literature Reference</li>
+    </ul>
+
+    <h4>ASEAN CTD (ACTD)</h4>
+    <ul>
+      <li>PART III — Non-Clinical Overview</li>
+      <li>PART IV — Clinical Overview</li>
+    </ul>
+
+    <h4>Additional Regulatory Documents</h4>
+    <ul>
+      <li>Case Report Form (CRF)</li>
+      <li>Package Insert (PI)</li>
+      <li>Drug Interaction Documents</li>
+      <li>Product Rationale (PR)</li>
+      <li>Subject Expert Committee Presentations</li>
+      <li>Patient Information Leaflets & Query Responses</li>
+      <li>DCGI Communications</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- CLINICAL -->
+<div class="collapsible">
+  <div class="head" onclick="togglePanel('clin')">
+    <div class="icon">🧪</div>
+    <h4>Clinical Writing</h4>
+    <div class="summary">Expand</div>
+  </div>
+
+  <div id="clin" class="panel">
+    <ul>
+      <li>Clinical Study Reports (CSR)</li>
+      <li>Safety Narratives</li>
+      <li>Efficacy Summaries</li>
+      <li>Clinical Study Appendices</li>
+      <li>Investigator Materials</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- SCIENTIFIC -->
+<div class="collapsible">
+  <div class="head" onclick="togglePanel('sci')">
+    <div class="icon">📘</div>
+    <h4>Scientific & Medical Communication</h4>
+    <div class="summary">Expand</div>
+  </div>
+
+  <div id="sci" class="panel">
+    <ul>
+      <li>Medical Education Slides</li>
+      <li>Explainer Scripts (YouTube / Instagram)</li>
+      <li>White Papers & Reviews</li>
+      <li>Scientific Visuals & Figures</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- PUBLICATION -->
+<div class="collapsible">
+  <div class="head" onclick="togglePanel('pub')">
+    <div class="icon">✍️</div>
+    <h4>Publications & Manuscripts</h4>
+    <div class="summary">Expand</div>
+  </div>
+
+  <div id="pub" class="panel">
+    <ul>
+      <li>Journal Manuscripts</li>
+      <li>Systematic Reviews</li>
+      <li>Abstracts</li>
+      <li>Conference Posters</li>
+      <li>Oral Presentation Slides</li>
+    </ul>
+  </div>
+</div>
+
+
+</div> <!-- container end -->
+
+<!-- ======================== FOOTER ========================= -->
+<div class="footer">
+  © Scientific Script
+</div>
+
+
+<script>
+function togglePanel(id){
+  let p = document.getElementById(id);
+  if(!p) return;
+
+  let isOpen = p.classList.contains("open");
+  document.querySelectorAll(".panel").forEach(el=>{
+    if(el !== p){ el.classList.remove("open"); el.style.maxHeight=null; }
+  });
+
+  if(isOpen){
+    p.classList.remove("open");
+    p.style.maxHeight = null;
+  } else {
+    p.classList.add("open");
+    p.style.maxHeight = p.scrollHeight + "px";
+  }
+}
+</script>
+
 </body>
 </html>
