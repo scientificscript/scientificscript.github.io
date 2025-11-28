@@ -6,7 +6,7 @@
 <title>Scientific Script — Medical Writing & Regulatory Services</title>
 
 <style>
-/* ---------- THEME COLORS (Matches your screenshot) ---------- */
+/* ---------- THEME COLORS ---------- */
 :root{
   --brand-blue:#0b4f9a;
   --brand-deep:#003B8E;
@@ -18,10 +18,12 @@
 }
 
 /* ---------- BASE ---------- */
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;font-family:Arial,Helvetica,sans-serif;
-  background:var(--page-bg);color:var(--muted);
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--page-bg);
+  color:var(--muted);
+  scroll-behavior:smooth;
 }
 
 /* ---------- HEADER ---------- */
@@ -34,12 +36,41 @@ body{
 .site-header h1{margin:0;font-size:42px;color:#fff}
 .site-header p{margin:8px 0 0;color:var(--subtitle-blue)}
 
+/* ---------- NAVBAR ---------- */
+.navbar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  background:var(--brand-blue);
+  padding:12px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+.navbar a:hover{color:var(--subtitle-blue)}
+
 /* ---------- LAYOUT ---------- */
 .container{max-width:1100px;margin:auto;padding:30px}
 
+/* ---------- SECTIONS ---------- */
+section{padding:40px 0}
+
 /* ---------- ABOUT ---------- */
-.about h2{color:var(--heading-dark);margin-bottom:12px}
-.about p{line-height:1.7;font-size:15px;color:#334155}
+.about h2, .services h2, .portfolio h2, .pricing h2, .contact h2{
+  color:var(--heading-dark);
+  margin-bottom:12px;
+}
+.about p, .portfolio p, .pricing p, .contact p{
+  line-height:1.7;
+  font-size:15px;
+  color:#334155;
+}
 
 /* ---------- SERVICE CARDS ---------- */
 .grid{
@@ -53,7 +84,9 @@ body{
   padding:20px;
   border-radius:12px;
   box-shadow:0 8px 18px rgba(12,36,75,0.06);
+  transition:0.3s;
 }
+.card:hover{transform:translateY(-4px); box-shadow:0 12px 24px rgba(12,36,75,0.1);}
 .card h3{margin:0;color:var(--heading-dark);font-size:18px}
 .card p{font-size:14px;margin-top:6px}
 
@@ -101,7 +134,6 @@ body{
 </style>
 </head>
 
-
 <body>
 
 <!-- =========================== HEADER ========================== -->
@@ -110,160 +142,145 @@ body{
   <p>Science Explained. Stories Told. Submissions Delivered.</p>
 </header>
 
+<!-- =========================== NAVBAR ========================== -->
+<nav class="navbar">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <!-- ========================== MAIN ============================ -->
 <div class="container">
 
-<!-- ABOUT -->
-<section class="about">
+<!-- HOME -->
+<section id="home" class="about">
   <h2>About Scientific Script</h2>
   <p>
     Scientific Script is a global scientific communication and premium medical writing brand led by an experienced Lead Medical Writer. I transform complex scientific, clinical, and regulatory information into clear, compliant, and publication-ready content for pharmaceutical, biotech, and healthcare organizations worldwide. With deep expertise in CTD modules, clinical trial documentation, pharmacokinetics, and scientific storytelling, Scientific Script helps clients achieve regulatory clarity, scientific credibility, and global submission excellence.
   </p>
 </section>
 
+  <h2 style="margin-top:40px;">Services</h2>
 
-<!-- SERVICE CARDS (Home preview) -->
-<section>
-  <h2 style="color:var(--heading-dark)">Services</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Regulatory Writing</h3>
-      <p>CTD, CSP, IB, CSR, ICF, PDE, Executive Summaries & Regulatory Submissions.</p>
+  <!-- REGULATORY -->
+  <div class="collapsible">
+    <div class="head" onclick="togglePanel('reg')">
+      <div class="icon">📄</div>
+      <h4>Regulatory Writing</h4>
+      <div class="summary">Expand</div>
     </div>
-
-    <div class="card">
-      <h3>Clinical Writing</h3>
-      <p>CSRs, Safety Narratives, Efficacy Summaries, Investigator Materials.</p>
+    <div id="reg" class="panel">
+      <ul>
+        <li><strong>Clinical Study Protocols (CSP)</strong></li>
+        <li><strong>Investigator Brochures (IB)</strong></li>
+        <li><strong>Clinical Study Reports (CSR)</strong></li>
+        <li><strong>Informed Consent Form (ICF)</strong></li>
+        <li><strong>PDE (Permitted Daily Exposure)</strong></li>
+        <li><strong>Executive Summaries</strong></li>
+      </ul>
+      <h4>CTD Modules</h4>
+      <ul>
+        <li>2.4 Non-Clinical Overview</li>
+        <li>2.5 Clinical Overview</li>
+        <li>2.6 Non-Clinical Summary</li>
+        <li>2.7 Clinical Summary</li>
+        <li>4.0 Non-Clinical Study Reports</li>
+        <li>4.3 Non-Clinical Literature Reference</li>
+        <li>5.4 Clinical Literature Reference</li>
+      </ul>
+      <h4>ASEAN CTD (ACTD)</h4>
+      <ul>
+        <li>PART III — Non-Clinical Overview</li>
+        <li>PART IV — Clinical Overview</li>
+      </ul>
+      <h4>Additional Regulatory Documents</h4>
+      <ul>
+        <li>Case Report Form (CRF)</li>
+        <li>Package Insert (PI)</li>
+        <li>Drug Interaction Documents</li>
+        <li>Product Rationale (PR)</li>
+        <li>Subject Expert Committee Presentations</li>
+        <li>Patient Information Leaflets & Query Responses</li>
+        <li>DCGI Communications</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="card">
-      <h3>Scientific Communication</h3>
-      <p>Slide Decks, Explainer Scripts, Medical Education, Visual Storytelling.</p>
+  <!-- CLINICAL -->
+  <div class="collapsible">
+    <div class="head" onclick="togglePanel('clin')">
+      <div class="icon">🧪</div>
+      <h4>Clinical Writing</h4>
+      <div class="summary">Expand</div>
     </div>
+    <div id="clin" class="panel">
+      <ul>
+        <li>Clinical Study Reports (CSR)</li>
+        <li>Safety Narratives</li>
+        <li>Efficacy Summaries</li>
+        <li>Clinical Study Appendices</li>
+        <li>Investigator Materials</li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="card">
-      <h3>Publication & Manuscripts</h3>
-      <p>Review Articles, Journal Manuscripts, Abstracts & Conference Posters.</p>
+  <!-- SCIENTIFIC -->
+  <div class="collapsible">
+    <div class="head" onclick="togglePanel('sci')">
+      <div class="icon">📘</div>
+      <h4>Scientific & Medical Communication</h4>
+      <div class="summary">Expand</div>
+    </div>
+    <div id="sci" class="panel">
+      <ul>
+        <li>Medical Education Slides</li>
+        <li>Explainer Scripts (YouTube / Instagram)</li>
+        <li>White Papers & Reviews</li>
+        <li>Scientific Visuals & Figures</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PUBLICATION -->
+  <div class="collapsible">
+    <div class="head" onclick="togglePanel('pub')">
+      <div class="icon">✍️</div>
+      <h4>Publications & Manuscripts</h4>
+      <div class="summary">Expand</div>
+    </div>
+    <div id="pub" class="panel">
+      <ul>
+        <li>Journal Manuscripts</li>
+        <li>Systematic Reviews</li>
+        <li>Abstracts</li>
+        <li>Conference Posters</li>
+        <li>Oral Presentation Slides</li>
+      </ul>
     </div>
   </div>
 </section>
 
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+  <h2>Portfolio</h2>
+  <p>Examples of medical writing, regulatory submissions, publications, and scientific communication delivered for global clients (confidentiality maintained).</p>
+</section>
 
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <h2>Pricing</h2>
+  <p>Flexible pricing packages for freelancers, small teams, and enterprise clients. Contact for custom quotes based on scope and complexity.</p>
+</section>
 
-<!-- ===================== DETAILED COLLAPSIBLE ====================== -->
-
-<h2 style="margin-top:40px;color:var(--heading-dark)">Detailed Services</h2>
-
-
-<!-- REGULATORY -->
-<div class="collapsible">
-  <div class="head" onclick="togglePanel('reg')">
-    <div class="icon">📄</div>
-    <h4>Regulatory Writing</h4>
-    <div class="summary">Expand</div>
-  </div>
-
-  <div id="reg" class="panel">
-    <ul>
-      <li><strong>Clinical Study Protocols (CSP)</strong></li>
-      <li><strong>Investigator Brochures (IB)</strong></li>
-      <li><strong>Clinical Study Reports (CSR)</strong></li>
-      <li><strong>Informed Consent Form (ICF)</strong></li>
-      <li><strong>PDE (Permitted Daily Exposure)</strong></li>
-      <li><strong>Executive Summaries</strong></li>
-    </ul>
-
-    <h4>CTD Modules</h4>
-    <ul>
-      <li>2.4 Non-Clinical Overview</li>
-      <li>2.5 Clinical Overview</li>
-      <li>2.6 Non-Clinical Summary</li>
-      <li>2.7 Clinical Summary</li>
-      <li>4.0 Non-Clinical Study Reports</li>
-      <li>4.3 Non-Clinical Literature Reference</li>
-      <li>5.4 Clinical Literature Reference</li>
-    </ul>
-
-    <h4>ASEAN CTD (ACTD)</h4>
-    <ul>
-      <li>PART III — Non-Clinical Overview</li>
-      <li>PART IV — Clinical Overview</li>
-    </ul>
-
-    <h4>Additional Regulatory Documents</h4>
-    <ul>
-      <li>Case Report Form (CRF)</li>
-      <li>Package Insert (PI)</li>
-      <li>Drug Interaction Documents</li>
-      <li>Product Rationale (PR)</li>
-      <li>Subject Expert Committee Presentations</li>
-      <li>Patient Information Leaflets & Query Responses</li>
-      <li>DCGI Communications</li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- CLINICAL -->
-<div class="collapsible">
-  <div class="head" onclick="togglePanel('clin')">
-    <div class="icon">🧪</div>
-    <h4>Clinical Writing</h4>
-    <div class="summary">Expand</div>
-  </div>
-
-  <div id="clin" class="panel">
-    <ul>
-      <li>Clinical Study Reports (CSR)</li>
-      <li>Safety Narratives</li>
-      <li>Efficacy Summaries</li>
-      <li>Clinical Study Appendices</li>
-      <li>Investigator Materials</li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- SCIENTIFIC -->
-<div class="collapsible">
-  <div class="head" onclick="togglePanel('sci')">
-    <div class="icon">📘</div>
-    <h4>Scientific & Medical Communication</h4>
-    <div class="summary">Expand</div>
-  </div>
-
-  <div id="sci" class="panel">
-    <ul>
-      <li>Medical Education Slides</li>
-      <li>Explainer Scripts (YouTube / Instagram)</li>
-      <li>White Papers & Reviews</li>
-      <li>Scientific Visuals & Figures</li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- PUBLICATION -->
-<div class="collapsible">
-  <div class="head" onclick="togglePanel('pub')">
-    <div class="icon">✍️</div>
-    <h4>Publications & Manuscripts</h4>
-    <div class="summary">Expand</div>
-  </div>
-
-  <div id="pub" class="panel">
-    <ul>
-      <li>Journal Manuscripts</li>
-      <li>Systematic Reviews</li>
-      <li>Abstracts</li>
-      <li>Conference Posters</li>
-      <li>Oral Presentation Slides</li>
-    </ul>
-  </div>
-</div>
-
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:contact@scientificscript.com">contact@scientificscript.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/scientificscript/" target="_blank">linkedin.com/in/scientificscript</a></p>
+  <p>Phone: +91 12345 67890</p>
+</section>
 
 </div> <!-- container end -->
 
@@ -272,7 +289,7 @@ body{
   © Scientific Script
 </div>
 
-
+<!-- ======================== JS ========================= -->
 <script>
 function togglePanel(id){
   let p = document.getElementById(id);
