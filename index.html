@@ -140,7 +140,16 @@ section{padding:40px 0}
 }
   /* ---------- PORTFOLIO CARD COLOR ---------- */
 .portfolio .card{
-  background:#e8f1ff;
+  background: linear-gradient(135deg, #cce0f5, #99c2e6); /* professional medical blue gradient */
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 8px 18px rgba(12,36,75,0.06);
+  transition:0.3s;
+}
+/* ---------- HOVER EFFECT ---------- */
+.portfolio .card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 24px rgba(12,36,75,0.15);
 }
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:600px){
