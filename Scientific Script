@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Script | Strategic Medical Writing Partner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0f172a;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 80px;
+  max-width: 1000px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #475569;
+  max-width: 650px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 30px;
+  background: #0f172a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 80px;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* STATEMENT */
+.statement {
+  max-width: 800px;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  padding: 100px 80px;
+}
+
+.cta h2 {
+  font-size: 32px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: white;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><strong>Scientific Script</strong></div>
+  <div>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="mailto:your@email.com">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    Strategic Medical Writing Partner for Pharma, Biotech, and Clinical Teams
+  </h1>
+  <p>
+    We support organizations with high-quality clinical, regulatory, and publication
+    deliverables—ensuring accuracy, compliance, and faster execution across projects.
+  </p>
+
+  <a href="mailto:your@email.com" class="btn">
+    Request Consultation
+  </a>
+</section>
+
+<!-- AUTHORITY STATEMENT -->
+<section class="section">
+  <div class="statement">
+    Trusted for complex scientific communication, we work with teams that require
+    precision, speed, and regulatory alignment—without compromising quality.
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Core Capabilities</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Publication & Manuscripts</h3>
+      <p>End-to-end manuscript development, journal submission, and revision support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Clinical Documentation</h3>
+      <p>CSRs, protocols, and clinical summaries aligned with global standards.</p>
+    </div>
+
+    <div class="card">
+      <h3>Regulatory Writing</h3>
+      <p>CTD modules, investigator brochures, and submission-ready documents.</p>
+    </div>
+
+    <div class="card">
+      <h3>Strategic Partnership</h3>
+      <p>Ongoing support for clinical and publication workflows.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFFERENTIATOR -->
+<section class="section">
+  <h2>Our Approach</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Precision</h3>
+      <p>Scientifically accurate and clinically relevant content.</p>
+    </div>
+
+    <div class="card">
+      <h3>Compliance</h3>
+      <p>Aligned with ICH, regulatory, and journal standards.</p>
+    </div>
+
+    <div class="card">
+      <h3>Efficiency</h3>
+      <p>Reduced turnaround time without compromising quality.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Looking for a Reliable Medical Writing Partner?</h2>
+  <p>Let’s discuss your upcoming project.</p>
+
+  <a href="mailto:your@email.com">
+    Contact Us
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Scientific Script. All rights reserved.
+</footer>
+
+</body>
+</html>
